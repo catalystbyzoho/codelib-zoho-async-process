@@ -1,0 +1,11 @@
+{
+	"deployment": {
+		"name": "custom_event",
+		"stack": "node18",
+		"type": "event",
+		"env_variables": {}
+	},
+	"execution": {
+		"main": "index.js"
+	}
+}

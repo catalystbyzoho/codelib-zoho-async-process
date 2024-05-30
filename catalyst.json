@@ -1,0 +1,8 @@
+{
+    "functions": {
+        "targets": [
+         "custom_event"
+        ],
+        "source": "functions"
+    }
+}

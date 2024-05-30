@@ -1,0 +1,9 @@
+{
+	"name": "custom_event",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": "solutions@zohocatalyst.com",
+	"dependencies": {
+		"zcatalyst-sdk-node": "2.5.1"
+	}
+}

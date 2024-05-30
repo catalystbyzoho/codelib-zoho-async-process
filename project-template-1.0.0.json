@@ -1,0 +1,59 @@
+{
+  "name" : "project-template",
+  "version" : "1.0.0",
+  "parameters" : { },
+  "components" : {
+    "Functions" : [ {
+      "type" : "function",
+      "name" : "custom_event",
+      "properties" : {
+        "stack" : "node18",
+        "code" : {
+          "path" : "functions/custom_event.zip"
+        },
+        "configuration" : {
+          "environment" : {
+            "variables" : { }
+          },
+          "memory" : 256
+        },
+        "type" : "event",
+        "name" : "custom_event"
+      },
+      "dependsOn" : [ ]
+    } ],
+    "EventListeners" : [ {
+      "type" : "listeners",
+      "name" : "CustomEventQueue",
+      "properties" : {
+        "bus_meta" : {
+          "enable_time" : 1716549385295
+        },
+        "name" : "CustomEventQueue",
+        "description" : "",
+        "produce_url" : "https://api.catalyst.zoho.com/baas/v1/project/3377000003756002/event-bus/3377000003756046/produce?ZCFKEY=1063154a730e3155eedf5db3db1a4d18",
+        "type" : "Custom",
+        "status" : "Enabled"
+      },
+      "dependsOn" : [ ]
+    }, {
+      "type" : "rules",
+      "name" : "Event_Rule",
+      "properties" : {
+        "listener_name" : "CustomEventQueue",
+        "rule_name" : "Event_Rule",
+        "description" : "",
+        "source_type" : "Custom",
+        "source" : [ ],
+        "target" : [ {
+          "entity_identifier" : "custom_event",
+          "target_type" : "Function"
+        } ],
+        "action" : [ "Produce" ],
+        "rule_identifier" : "slack_app",
+        "status" : true
+      },
+      "dependsOn" : [ "Functions.function.custom_event" ]
+    }]
+  }
+}

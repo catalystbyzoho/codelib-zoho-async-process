@@ -30,7 +30,7 @@ You can also initialize a new project following the steps mentioned in this page
 Execute the command below in the terminal to install the Zoho Async Process CodeLib solution:
 
 ```bash
-catalyst codelib:install https://github.com/akilavan-jayakumar/codelib-zoho-async-process
+catalyst codelib:install https://github.com/catalystbyzoho/codelib-zoho-async-process
 ```
 
 Upon installation, the pre-configured Catalyst resources of the CodeLib solution will be automatically deployed to the Catalyst console.
